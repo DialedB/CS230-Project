@@ -2,15 +2,17 @@
 #include <fstream>
 
 int main() {
+
     bool isRunning = true;
 
-    std::ifstream file("Resources/social_media_contest_data.txt");
-
     do {
+        std::ifstream file("Resources/social_media_contest_data.txt");
         int input;
         std::cout << "Welcome to my CS230 Semester Project!!!" << std::endl;
         std::cout << "Please pick one of the options (1-6)" << std::endl;
+        std::cout << std::endl;
         std::cout << "Inputting anything but the options will lead to the menu showing up again." << std::endl;
+        std::cout << std::endl;
         std::cout << "Option 1: Read and display contest stats for the 12 finalists" << std::endl;
         std::cout << "Option 2: Calculate and display per post data values" << std::endl;
         std::cout << "Option 3: Filter and sort data by likes/post" << std::endl;
