@@ -16,21 +16,24 @@ int main() {
         std::cout << "Option 6: Exit the program" << std::endl;
         std::cin >> input;
         if (input == 1) {
-
+            // LAST|FOL|PST|VIW|ENG|LIK|CMT|SHR
         }
         else if (input == 2) {
-
+            // DATA/POST for every piece of data
         }
         else if (input == 3) {
-
+            // Data filtering with lower limit of LIK/PST
         }
         else if (input == 4) {
-
+            // Custom performance metric added to new txt file (VIW/ENG) - NEW
+            // Display: NAME|LAST|ORG|SEX|NEW
         }
         else if (input == 5) {
-
+            // Sorting by selected data (notebook has the data)
+            // Saves sorted data into new file called: social_media_sorted_stats.txt
         }
         else if (input == 6) {
+            //Ends running loop - Exits program
             isRunning = false;
         }
     }while(isRunning);
