@@ -1,7 +1,10 @@
 #include <iostream>
+#include <fstream>
 
 int main() {
     bool isRunning = true;
+
+    std::ifstream file("Resources/social_media_contest_data.txt");
 
     do {
         int input;
@@ -16,7 +19,11 @@ int main() {
         std::cout << "Option 6: Exit the program" << std::endl;
         std::cin >> input;
         if (input == 1) {
+            std::string line;
             // LAST|FOL|PST|VIW|ENG|LIK|CMT|SHR
+            while (getline(file, line)) {
+                std::cout << line << std::endl;
+            }
         }
         else if (input == 2) {
             // DATA/POST for every piece of data
