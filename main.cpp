@@ -5,15 +5,16 @@
 #include <algorithm>
 
 // Function prototypes
-void displayContestStats(std::ifstream& file);
-void calculatePerPostData(std::ifstream& file);
-void filterAndSortByLikesPerPost(std::ifstream& file);
-void displaySortedByPerformanceMetric(std::ifstream& file);
-void parametrizedSortingAndSave(std::ifstream& file);
+void displayContestStats(std::fstream& file);
+void calculatePerPostData(std::fstream& file);
+void filterAndSortByLikesPerPost(std::fstream& file);
+void displaySortedByPerformanceMetric(std::fstream& file);
+void parametrizedSortingAndSave(std::fstream& file);
 
 int main() {
+    
     bool isRunning = true;
-    std::ifstream file("social_media_contest_data.txt");
+    std::fstream file("social_media_contest_data.csv");
 
     // Check if the file opened successfully
     if (!file.is_open()) {
@@ -75,7 +76,7 @@ int main() {
 }
 
 // Function to display contest stats
-void displayContestStats(std::ifstream& file) {
+void displayContestStats(std::fstream& file) {
     std::string line;
     file.clear(); // Clear any error flags
     file.seekg(0, std::ios::beg); // Reset file pointer to the beginning
@@ -89,7 +90,7 @@ void displayContestStats(std::ifstream& file) {
 }
 
 // Function to calculate and display per post data values
-void calculatePerPostData(std::ifstream& file) {
+void calculatePerPostData(std::fstream& file) {
     std::string line;
     file.clear();
     file.seekg(0, std::ios::beg);
@@ -109,7 +110,7 @@ void calculatePerPostData(std::ifstream& file) {
 }
 
 // Function to filter and sort data by likes/post
-void filterAndSortByLikesPerPost(std::ifstream& file) {
+void filterAndSortByLikesPerPost(std::fstream& file) {
     std::string line;
     file.clear();
     file.seekg(0, std::ios::beg);
@@ -140,13 +141,13 @@ void filterAndSortByLikesPerPost(std::ifstream& file) {
 }
 
 // Function to display sorted data based on a novel performance metric
-void displaySortedByPerformanceMetric(std::ifstream& file) {
+void displaySortedByPerformanceMetric(std::fstream& file) {
     // Placeholder for custom metric logic
     std::cout << "Option 4: Custom performance metric logic goes here." << std::endl;
 }
 
 // Function for parametrized sorting, display, and saving of processed data
-void parametrizedSortingAndSave(std::ifstream& file) {
+void parametrizedSortingAndSave(std::fstream& file) {
     // Placeholder for parametrized sorting logic
     std::cout << "Option 5: Parametrized sorting logic goes here." << std::endl;
 }
