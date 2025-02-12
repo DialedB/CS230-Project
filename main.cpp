@@ -125,7 +125,7 @@ void filterAndSortByLikesPerPost(std::ifstream& file) {
         iss >> lastName >> followers >> posts >> views >> engagements >> likes >> comments >> shares;
 
         int likesPerPost = std::stoi(likes) / std::stoi(posts);
-        data.push_back({lastName, likesPerPost});
+        data.emplace_back(lastName, likesPerPost);
     }
 
     // Sort by likes/post in descending order
