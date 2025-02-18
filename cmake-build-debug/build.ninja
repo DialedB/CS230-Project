@@ -55,6 +55,30 @@ build CMakeFiles/cs230_Project.dir/main.cpp.o: CXX_COMPILER__cs230_Project_unsca
   OBJECT_DIR = CMakeFiles/cs230_Project.dir
   OBJECT_FILE_DIR = CMakeFiles/cs230_Project.dir
 
+build CMakeFiles/cs230_Project.dir/FIleIO.cpp.o: CXX_COMPILER__cs230_Project_unscanned_Debug /Users/dusanboljevic/Desktop/code/cs230-Project/FIleIO.cpp || cmake_object_order_depends_target_cs230_Project
+  DEP_FILE = CMakeFiles/cs230_Project.dir/FIleIO.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/cs230_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/cs230_Project.dir
+
+build CMakeFiles/cs230_Project.dir/Calculations.cpp.o: CXX_COMPILER__cs230_Project_unscanned_Debug /Users/dusanboljevic/Desktop/code/cs230-Project/Calculations.cpp || cmake_object_order_depends_target_cs230_Project
+  DEP_FILE = CMakeFiles/cs230_Project.dir/Calculations.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/cs230_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/cs230_Project.dir
+
+build CMakeFiles/cs230_Project.dir/Sorting.cpp.o: CXX_COMPILER__cs230_Project_unscanned_Debug /Users/dusanboljevic/Desktop/code/cs230-Project/Sorting.cpp || cmake_object_order_depends_target_cs230_Project
+  DEP_FILE = CMakeFiles/cs230_Project.dir/Sorting.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/cs230_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/cs230_Project.dir
+
+build CMakeFiles/cs230_Project.dir/Menu.cpp.o: CXX_COMPILER__cs230_Project_unscanned_Debug /Users/dusanboljevic/Desktop/code/cs230-Project/Menu.cpp || cmake_object_order_depends_target_cs230_Project
+  DEP_FILE = CMakeFiles/cs230_Project.dir/Menu.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/cs230_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/cs230_Project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cs230_Project
@@ -63,7 +87,7 @@ build CMakeFiles/cs230_Project.dir/main.cpp.o: CXX_COMPILER__cs230_Project_unsca
 #############################################
 # Link the executable cs230_Project
 
-build cs230_Project: CXX_EXECUTABLE_LINKER__cs230_Project_Debug CMakeFiles/cs230_Project.dir/main.cpp.o
+build cs230_Project: CXX_EXECUTABLE_LINKER__cs230_Project_Debug CMakeFiles/cs230_Project.dir/main.cpp.o CMakeFiles/cs230_Project.dir/FIleIO.cpp.o CMakeFiles/cs230_Project.dir/Calculations.cpp.o CMakeFiles/cs230_Project.dir/Sorting.cpp.o CMakeFiles/cs230_Project.dir/Menu.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1
   OBJECT_DIR = CMakeFiles/cs230_Project.dir
   POST_BUILD = :
