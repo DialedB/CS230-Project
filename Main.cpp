@@ -30,7 +30,7 @@ int main() {
             }
             case 4:
                 calculateNewMetric(contestants);
-            saveProcessedData(contestants);
+                saveProcessedData(contestants);
             break;
             case 5: {
                 // Implement sorting and saving logic here
