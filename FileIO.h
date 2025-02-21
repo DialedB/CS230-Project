@@ -7,3 +7,4 @@
 
 vector<Contestant> readData();
 void saveProcessedData(const vector<Contestant>& contestants);
+void displayData(const vector<Contestant>& contestants);

@@ -17,6 +17,7 @@ int main() {
         switch(choice) {
             case 1:
                 contestants = readData();
+                displayData(contestants);
             break;
             case 2:
                 calculatePerPost(contestants);
