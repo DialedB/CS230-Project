@@ -9,14 +9,13 @@
 using namespace std;
 
 int main() {
-    vector<Contestant> contestants;
+    vector<Contestant> contestants = readData();
     int choice;
     do {
         displayMenu();
         choice = getMenuChoice();
         switch(choice) {
             case 1:
-                contestants = readData();
                 displayData(contestants);
             break;
             case 2:

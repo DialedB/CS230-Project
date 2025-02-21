@@ -10,11 +10,14 @@ using namespace std;
 void calculatePerPost(const vector<Contestant>& contestants) {
     cout << "LAST\tVIW/PST\tENG/PST\tLIK/PST\tCMT/PST\tSHR/PST" << endl;
     for (const auto& c : contestants) {
-        double viewsPerPost = (double)c.views / c.posts;
-        double engPerPost = (double)c.engagements / c.posts;
-        double likesPerPost = (double)c.likes / c.posts;
-        double cmtPerPost = (double)c.comments / c.posts;
-        double shrPerPost = (double)c.shares / c.posts;
+        // Calculate metrics, ensuring no division by zero
+        double viewsPerPost = (c.posts > 0) ? (double)c.views / c.posts : 0.0;
+        double engPerPost = (c.posts > 0) ? (double)c.engagements / c.posts : 0.0;
+        double likesPerPost = (c.posts > 0) ? (double)c.likes / c.posts : 0.0;
+        double cmtPerPost = (c.posts > 0) ? (double)c.comments / c.posts : 0.0;
+        double shrPerPost = (c.posts > 0) ? (double)c.shares / c.posts : 0.0;
+
+        // Display the calculated metrics
         cout << c.surname << "\t"
              << fixed << setprecision(2) << viewsPerPost << "\t"
              << engPerPost << "\t"
