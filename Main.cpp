@@ -32,7 +32,7 @@ int main() {
                 saveProcessedData(contestants);
                 break;
             case 5:
-                // Implement sorting and saving logic here
+                parametrizedSort(contestants);
                 break;
             case 6:
                 cout << "Exiting..." << endl;

@@ -33,14 +33,9 @@ void sortByNewMetric(vector<Contestant>& contestants) {
 }
 
 void parametrizedSort(vector<Contestant>& contestants, int sortField, bool ascending) {
-    switch(sortField) {
-        case 1: // VIW/PST
-            sort(contestants.begin(), contestants.end(), [ascending](const Contestant& a, const Contestant& b) {
-                double aVal = (double)a.views / a.posts;
-                double bVal = (double)b.views / b.posts;
-                return ascending ? (aVal < bVal) : (aVal > bVal);
-            });
-        break;
-        // Additional cases for other fields
-    }
+    sort(contestants.begin(), contestants.end(), [ascending](const Contestant& a, const Contestant& b) {
+        double aVal = (double)a.views / a.posts;
+        double bVal = (double)b.views / b.posts;
+        return ascending ? (aVal < bVal) : (aVal > bVal);
+    });
 }
