@@ -32,7 +32,7 @@ void sortByNewMetric(vector<Contestant>& contestants) {
     });
 }
 
-void parametrizedSort(vector<Contestant>& contestants, int sortField, bool ascending) {
+void parametrizedSort(vector<Contestant>& contestants, bool ascending) {
     sort(contestants.begin(), contestants.end(), [ascending](const Contestant& a, const Contestant& b) {
         double aVal = (double)a.views / a.posts;
         double bVal = (double)b.views / b.posts;
