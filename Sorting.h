@@ -7,4 +7,4 @@
 
 void filterAndSortByLikesPerPost(const vector<Contestant>& contestants, double minLikesPerPost);
 void sortByNewMetric(vector<Contestant>& contestants);
-void parametrizedSort(vector<Contestant>& contestants, bool ascending);
+void parametrizedSort(vector<Contestant>& contestants, const string& sortField, bool ascending);

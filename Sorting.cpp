@@ -32,10 +32,33 @@ void sortByNewMetric(vector<Contestant>& contestants) {
     });
 }
 
-void parametrizedSort(vector<Contestant>& contestants, bool ascending) {
-    sort(contestants.begin(), contestants.end(), [ascending](const Contestant& a, const Contestant& b) {
-        double aVal = (double)a.views / a.posts;
-        double bVal = (double)b.views / b.posts;
+void parametrizedSort(vector<Contestant>& contestants, const string& sortField, bool ascending) {
+    sort(contestants.begin(), contestants.end(), [&sortField, ascending](const Contestant& a, const Contestant& b) {
+        double aVal = 0, bVal = 0;
+
+        // Compute per post metric based on the selected field
+        if (sortField == "VIW/PST") {
+            aVal = (double)a.views / a.posts;
+            bVal = (double)b.views / b.posts;
+        } else if (sortField == "ENG/PST") {
+            aVal = (double)a.engagements / a.posts;
+            bVal = (double)b.engagements / b.posts;
+        } else if (sortField == "LIK/PST") {
+            aVal = (double)a.likes / a.posts;
+            bVal = (double)b.likes / b.posts;
+        } else if (sortField == "CMT/PST") {
+            aVal = (double)a.comments / a.posts;
+            bVal = (double)b.comments / b.posts;
+        } else if (sortField == "SHR/PST") {
+            aVal = (double)a.shares / a.posts;
+            bVal = (double)b.shares / b.posts;
+        } else if (sortField == "NEW") {
+            aVal = a.newMetric; // Assuming 'NEW' is already a precomputed value
+            bVal = b.newMetric;
+        } else {
+            throw invalid_argument("Invalid sorting field");
+        }
+
         return ascending ? (aVal < bVal) : (aVal > bVal);
     });
 }

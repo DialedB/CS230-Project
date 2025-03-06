@@ -11,6 +11,8 @@ using namespace std;
 int main() {
     vector<Contestant> contestants = readData();
     int choice;
+    string sortField;
+    bool ascending;
     do {
         displayMenu();
         choice = getMenuChoice();
@@ -32,7 +34,13 @@ int main() {
                 saveProcessedData(contestants);
                 break;
             case 5:
-                parametrizedSort(contestants, true);
+                cout << "Enter sorting field (VIW/PST, ENG/PST, LIK/PST, CMT/PST, SHR/PST, NEW): ";
+                cin >> sortField;
+                cout << "Sort in ascending order? (1 for Yes, 0 for No): ";
+                cin >> ascending;
+
+                parametrizedSort(contestants, sortField, ascending);
+                displayData(contestants);
                 break;
             case 6:
                 cout << "Exiting..." << endl;
